@@ -1,3 +1,12 @@
+<?php
+include include("../config/connection.php");
+
+$stmt = $conecta->prepare("SELECT * FROM posts ORDER BY id DESC");
+$stmt->execute();
+
+$results = $stmt->fetchALL(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

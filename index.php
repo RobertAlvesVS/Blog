@@ -1,4 +1,5 @@
     <?php include "nav.php"; ?>
+    <!--Carrosel-->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -37,6 +38,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <!--Cards-->
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col gy-5">
@@ -77,4 +79,5 @@
             </div>
         </div>
     </div>
+    <!--Footer-->
     <?php include "footer.php"; ?>
