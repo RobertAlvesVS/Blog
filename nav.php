@@ -1,7 +1,7 @@
 <?php
-include include("../config/connection.php");
+include "config/connection.php";
 
-$stmt = $conecta->prepare("SELECT * FROM posts ORDER BY id DESC");
+$stmt = $conectar->prepare("SELECT * FROM posts ORDER BY id DESC");
 $stmt->execute();
 
 $results = $stmt->fetchALL(PDO::FETCH_ASSOC);

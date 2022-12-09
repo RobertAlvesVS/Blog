@@ -41,42 +41,18 @@
     <!--Cards-->
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col gy-5">
-                <div class="card">
-                    <img src="images/eldenring.jpg" class="card-img-top" alt="Fotinha">
-                    <div class="card-body">
-                        <h5 class="card-title">Elden Ring</h5>
-                        <p class="card-text">Tens o que é necessário para vencer esse novo jogo da FROM SOFTWARE? Venha conferir o começando bem de Elden Ring</p>
+            <?php foreach ($results as $post) : ?>
+                <div class="col gy-5">
+                    <div class="card">
+                        <img src="<?= $post["image"] ?>" class="card-img-top" alt="Fotinha">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $post["title"] ?></h5>
+                            <p class="card-text"><?= $post["description"] ?></p>
+                            <a href="viewBlog.php?id=<?= $post["id"] ?>"><i class="fas fa-eye check-icon">Ver</i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col gy-5">
-                <div class="card">
-                    <img src="images/Sekiro.jpg" class="card-img-top" alt="Fotinha">
-                    <div class="card-body">
-                        <h5 class="card-title">Sekiroooh</h5>
-                        <p class="card-text">Jogo gostoso e desafiante, se você é nutelinha e gosta de modo easy PASSA LONGE</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col gy-5">
-                <div class="card">
-                    <img src="images/darksouls.jpg" class="card-img-top" alt="Fotinha">
-                    <div class="card-body">
-                        <h5 class="card-title">Dark Souls III</h5>
-                        <p class="card-text">Já platinei este jogo e confesso que sou apaixonado pela franquia SOULS, mas nem tudo são floresc venha comigo neste detonado.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col gy-5">
-                <div class="card">
-                    <img src="images/kratos.jpg" class="card-img-top" alt="Fotinha">
-                    <div class="card-body">
-                        <h5 class="card-title">Kratos</h5>
-                        <p class="card-text">Conhece o Kleitão e o menino Mateus? Então ele ta de volta no novo GOD OF WAR: Ragnarok <br> Venha agora conferir!!</p>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <!--Footer-->
