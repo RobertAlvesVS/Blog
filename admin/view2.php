@@ -9,7 +9,7 @@ $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 include "header.php"; ?>
-<main>
+<main class="col-md-9 col-lg-10">
     <div class="container">
         <h1 id="main-title">Meus Posts</h1>
         <table class="table" id="contacts-table">
@@ -55,8 +55,4 @@ include "header.php"; ?>
         </table>
     </div>
 </main>
-</div>
-</div>
-</body>
-
-</html>
+<?php include "footer.php";?>

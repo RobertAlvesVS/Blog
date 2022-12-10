@@ -21,10 +21,10 @@
                 <p><a href="?sair">Deslogar</a></p>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a href="" class="nav-item">Controlar Posts</a>
+                        <a href="" class="nav-item">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-item">Constrola Slides</a>
+                        <a href="" class="nav-item">Inserir</a>
                     </li>
                 </ul>
             </nav>

@@ -4,7 +4,7 @@
     session_start();
 
     $login = $_POST["login"];
-    $senha = $_POST["senha"];
+    $senha = md5($_POST["senha"]);
 
     $stmt = $conectar->prepare("SELECT * FROM users WHERE login = :login AND senha = :senha");
 
@@ -13,6 +13,8 @@
 
     $stmt->execute();
 
+    
+    
     if($stmt->rowCount()==1){
         $info = $stmt->fetch();
         //var_dump($info);
@@ -26,4 +28,3 @@
     }else{
         echo "Usuario não cadastrado";
     }
-?>
