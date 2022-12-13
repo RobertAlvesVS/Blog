@@ -11,9 +11,21 @@ $results = $stmt->fetchALL(PDO::FETCH_ASSOC);
 
 ?>
 
-<?php foreach ($results as $post) : ?>
-    <h1><?= $post["title"] ?></h1>
-    <p><img src="<?= $post["image"] ?>" class="card-img-top" alt="..."></p>
-    <p><?= $post["description"] ?></p>
-    <p><?= date('d/m/Y', strtotime($post["data"])); ?></p>
-<?php endforeach; ?>
+<div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <?php foreach ($results as $post) : ?>
+                <div class="col gy-5">
+                    <div class="card">
+                        <img src="<?= $post["image"] ?>" class="card-img-top" alt="Fotinha">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $post["title"] ?></h5>
+                            <p class="card-text"><?= $post["description"] ?></p>
+                            <a href="admin/viewBlog.php?id=<?= $post["id"] ?>"><i class="fas fa-eye check-icon">Ver</i></a>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+
+    <?php include "footer.php";?>

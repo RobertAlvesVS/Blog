@@ -1,3 +1,46 @@
-#logo{
-    width: 50px;
+#logo {
+  width: 50px;
+}
+
+.blog-link {
+  overflow: hidden;
+  text-align: center;
+}
+
+.blog-link:before, .blog-link:after {
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.blog-link:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.blog-link:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.bi-arrow-up-circle-fill{
+  font-size: 40px;
+  color: white;
+}
+
+.bi-github, .bi-instagram, .bi-twitter{
+  padding: 5px;
+  color: white;
+}
+
+.bi:hover{
+  color: black;
+}
+
+#login{
+  margin-left: 20px;
 }
