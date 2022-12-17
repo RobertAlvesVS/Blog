@@ -3,20 +3,26 @@ include "session.php";
 include "header.php";
 ?>
 
-<form action="card_userOK.php" method="post" class="col-md-9 col-lg-10">
-    <div class="mb-3">
-        <label class="form-label">Digite o nome de usuario</label>
-        <input type="text" class="form-control" name="nome">
+<main class="col-md-9 col-lg-10">
+    <div class="container-fluid">
+        <h1><strong>Cadastrar Usuario</strong></h1>
+        <form action="card_userOK.php" method="post">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Nome de Usuario" name="nome" required="">
+                <label for="floatingInput">Usuário</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Login de Usuario" name="login" required="">
+                <label for="floatingInput">Login</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Senha de Usuario" name="senha" required="">
+                <label for="floatingInput">Senha</label>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
     </div>
-    <div class="mb-3">
-        <label class="form-label">Digite o Login do usuario</label>
-        <input type="text" class="form-control" name="login">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Digite a Senha do Usuario</label>
-        <input type="text" class="form-control" name="senha">
-    </div>
-    <div class="mb-3">
-        <button type="submit" class="btn btn-dark">Cadastrar Usuario</button>
-    </div>
-</form>
+</main>
+
+<?php include "footer.php"; ?>

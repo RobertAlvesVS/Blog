@@ -27,14 +27,9 @@ include "header.php"; ?>
                     <td scope="row">Titulo</td>
                     <td scope="row">Descrição</td>
                     <td class="actions">
-                        <a href="">
-                            <i class="bi bi-eye-fill">Ver</i>
-                        </a>
-                        <a href=""><i class="bi bi-pencil">Editar</i>
-                        </a>
-                        <a href="">
-                            <i class="bi bi-x-square-fill">Excluir</i>
-                        </a>
+                        <i class="bi bi-eye-fill">Ver</i>
+                        <i class="bi bi-pencil">Editar</i>
+                        <i class="bi bi-x-square-fill">Excluir</i>
                     </td>
                 </tr>
             </tbody>
@@ -44,10 +39,10 @@ include "header.php"; ?>
                         <td scope="row"><?= $post["id"] ?></td>
                         <td scope="row"><?= $post["title"] ?></td>
                         <td scope="row"><?= $post["description"] ?></td>
-                        <td class="action">
-                            <a href="viewBlog.php?id=<?= $post["id"] ?>"><i class="bi bi-eye-fill">Ver</i></a>
-                            <a href="editar.php?id=<?= $post["id"] ?>"><i class="bi bi-pencil">Editar</i></a>
-                            <a href="delete.php?id=<?= $post["id"] ?>"><i class="bi bi-x-square-fill">Excluir</i></a>
+                        <td class="action" id="icon">
+                            <a href="viewBlog.php?id=<?= $post["id"] ?>"><i class="bi bi-eye-fill icon"></i></a>
+                            <a href="editar.php?id=<?= $post["id"] ?>"><i class="bi bi-pencil icon"></i></a>
+                            <a href="delete.php?id=<?= $post["id"] ?>"><i class="bi bi-x-square-fill icon"></i></a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -55,4 +50,4 @@ include "header.php"; ?>
         </table>
     </div>
 </main>
-<?php include "footer.php";?>
+<?php include "footer.php"; ?>

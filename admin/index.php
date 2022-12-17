@@ -26,7 +26,7 @@
                 <label for="formGroupExampleInput2" class="form-label">Senha</label>
                 <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Insira sua senha" name="senha">
             </div>
-            <button type="submit" class="btn btn-primary">Primary</button>
+            <button type="submit" class="btn btn-primary">Login</button>
         </form>
     </main>
 </body>

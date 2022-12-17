@@ -37,19 +37,16 @@ $results = $stmt->fetchALL(PDO::FETCH_ASSOC);
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Posts</a>
+                        <a class="nav-link" href="#">Click e Descubra</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Conteúdo
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Sobre nós</a></li>
-                            <li><a class="dropdown-item" href="">O que há de novo</a></li>
                             <li>
                                 <h5 class="blog-link">Filtro</h5>
                             </li>
-                            <li><a class="dropdown-item" href="#">Filtro</a></li>
                             <li class="nav-item">
                                 <a class="dropdown-item" href="category.php?cat=xbox">Xbox</a>
                             </li>
@@ -64,8 +61,9 @@ $results = $stmt->fetchALL(PDO::FETCH_ASSOC);
                 </ul>
                 <form action="buscar.php" method="post" class="d-flex" role="search">
                     <input name="buscar" class="form-control me-2" type="search" placeholder="Quer pesquisar o quê?" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Pequisar</button>
-                </form>                
+                    <button class="btn btn-outline-success me-2" type="submit">Pequisar</button>
+                </form>
+                <a href="admin/index.php"><button class="btn btn-outline-success" type="submit">Login</button></a>
             </div>
         </div>
     </nav>

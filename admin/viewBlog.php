@@ -2,11 +2,8 @@
 include("../config/connection.php");
 
 $id = $_GET["id"];
-
 $stmt = $conectar->prepare("SELECT id, title, description, image FROM posts WHERE id = :id");
-
 $stmt->execute(array('id' => $id));
-
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
@@ -28,7 +25,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php foreach ($results as $post) : ?>
         <h1><?= $post["title"] ?></h1>
         <p><?= $post["description"] ?></p>
-        <img src="<?= $post['image']?>" alt="...">
+        <img src=".<?= $post['image']?>" alt="...">
     <?php endforeach; ?>
 </body>
 

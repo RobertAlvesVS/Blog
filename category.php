@@ -20,7 +20,7 @@ $results = $stmt->fetchALL(PDO::FETCH_ASSOC);
                         <div class="card-body">
                             <h5 class="card-title"><?= $post["title"] ?></h5>
                             <p class="card-text"><?= $post["description"] ?></p>
-                            <a href="admin/viewBlog.php?id=<?= $post["id"] ?>"><i class="fas fa-eye check-icon">Ver</i></a>
+                            <a href="viewPost.php?id=<?= $post["id"] ?>"><i class="fas fa-eye check-icon">Ver</i></a>
                         </div>
                     </div>
                 </div>
